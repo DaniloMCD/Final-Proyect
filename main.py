@@ -5,19 +5,22 @@ def russianRoulete(a,b):
         b = random.randint(1,5)
 
         if a == b:
-            print("-"*7)
+            print("-"*10)
             print("|Moriste|")
-            print("-"*7)
+            print("-"*10)
         else:
             print("-"*74)
             print(f" |  Casi!! la bala estaba en el cartucho {b} y disparaste el cartucho {a}  | ")
             print("-"*74)
 a=0
 b=0
+
+
 #Historial
 story = []
-#Menu
 
+
+#Menu
 while(True):
     print("+" + "-"*12 + "+")
     print("| BIENVENIDO |")
@@ -27,13 +30,17 @@ while(True):
     response = input("Te atreves a jugar? ")
 
     if response == "Si":
+        print("BAMM \n")
         russianRoulete(a,b)
         response2 = input("Quieres seguir jugando? ")
-        if response2 == "si":
-            print("OK")
+        if response2 == "Si":
+            print("OK \n")
         else:
             break
+    elif response == 1:
+        print(story)
     else:
+        print("Pff cobarde")
         break
 
     
