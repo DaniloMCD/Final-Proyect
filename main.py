@@ -1,8 +1,8 @@
 import random
 
 def russianRoulete(a, b, historial):
-    a = random.randint(1, 5)
-    b = random.randint(1, 5)
+    a = random.randint(1, 3)
+    b = random.randint(1, 3)
 
     if a == b:
         print("-" * 10)
@@ -29,7 +29,7 @@ while True:
     response = input("Te atreves a jugar? ")
 
     if response.lower() == "si":
-        print("BAMM \n")
+        print("\n|  BAMM  |\n")
         russianRoulete(a, b, historial)
         response2 = input("Quieres seguir jugando? ")
         if response2.lower() != "si":
@@ -39,7 +39,7 @@ while True:
         for i, resultado in enumerate(historial, start=1):
             print(f"Partida {i}: {resultado}")
     else:
-        print("Pff cobarde")
+        print("\n Pff cobarde")
         break
 
     
